@@ -61,8 +61,23 @@ Minimal UCI mode:
 ./build/chess uci
 ```
 
-## Colab Workflow
+Benchmark without cuda:
+```
+cmake -S . -B build -DUSE_OMP=ON -DUSE_CUDA=OFF
+cmake --build build -j
+./build/chess report --maxdepth 8 --out perf_report.html
+```
 
+Benchmark with cuda:
+```
+cmake -S . -B build -DUSE_OMP=ON -DUSE_CUDA=OFF
+cmake --build build -j
+./build/chess report --maxdepth 8 --out perf_report.html
+```
+
+
+## Colab Workflow
+You can also evaluate performance on colab
 1. Run `python3 gen_notebook.py`.
 2. Open `chess_cuda_benchmark.ipynb`.
 3. Upload the notebook to Colab.
