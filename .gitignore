@@ -1,0 +1,11 @@
+.DS_Store
+
+build/
+build_test/
+
+perf_report.html
+perf_report_fresh.html
+
+*.o
+*.obj
+*.out
